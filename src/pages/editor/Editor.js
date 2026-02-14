@@ -206,6 +206,13 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
+        id: "print.specialRulesTitle",
+      }),
+      icon: "print",
+      to: `/print-special-rules/${listId}`,
+    },
+    {
+      name: intl.formatMessage({
         id: "misc.delete",
       }),
       icon: "delete",

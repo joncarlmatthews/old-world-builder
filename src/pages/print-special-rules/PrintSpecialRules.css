@@ -1,0 +1,181 @@
+@media print {
+  body {
+    background: #fff !important;
+  }
+
+  .hide-for-printing {
+    display: none;
+  }
+}
+
+@media screen {
+  .print-special-rules {
+    background-color: #fff;
+    margin: 1rem;
+  }
+
+  .hide-for-printing {
+    padding: 5rem 1rem 0 1rem;
+  }
+}
+
+.print-special-rules {
+  font-size: 14px;
+  padding: 1rem;
+}
+
+.print-special-rules h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-font);
+}
+
+.print-special-rules ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.print-special-rules li {
+  margin-bottom: 0.5rem;
+}
+
+.print-special-rules-footer {
+  padding-top: 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-font);
+}
+
+.print-special-rules-footer p {
+  text-align: center;
+}
+
+.print-special-rules__button {
+  margin-left: 0;
+  transform: none;
+}
+
+.print-special-rules__loading {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 2rem 0;
+}
+
+.print-special-rules__rule {
+  margin-bottom: 2rem;
+  break-inside: avoid;
+}
+
+.print-special-rules__rule-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+
+.print-special-rules__rule-content {
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.print-special-rules__rule-content p {
+  margin: 0.5rem 0;
+}
+
+.print-special-rules__rule-content h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.print-special-rules__rule-content ul,
+.print-special-rules__rule-content ol {
+  margin-left: 1.5rem;
+}
+
+.print-special-rules__rule-content em {
+  font-style: italic;
+}
+
+.print-special-rules__rule-content strong {
+  font-weight: bold;
+}
+
+.print-special-rules__rule-not-found {
+  padding-left: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Table styling for rules content */
+.print-special-rules__rule-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+}
+
+.print-special-rules__rule-content thead {
+  background-color: #f5f5f5;
+}
+
+.print-special-rules__rule-content th {
+  padding: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+}
+
+.print-special-rules__rule-content td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.print-special-rules__rule-content tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.print-special-rules__rule-content tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ensure good print layout */
+@media print {
+  .print-special-rules__rule {
+    page-break-inside: avoid;
+  }
+
+  .print-special-rules__loading {
+    display: none;
+  }
+
+  /* Print-specific table styling */
+  .print-special-rules__rule-content table {
+    page-break-inside: avoid;
+  }
+
+  .print-special-rules__rule-content thead {
+    display: table-header-group;
+  }
+
+  .print-special-rules__rule-content tbody tr {
+    page-break-inside: avoid;
+  }
+
+  /* Remove hover effects in print */
+  .print-special-rules__rule-content tbody tr:hover {
+    background-color: transparent;
+  }
+
+  /* Ensure alternating row colors print properly */
+  .print-special-rules__rule-content tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+}

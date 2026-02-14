@@ -13,6 +13,7 @@ import { Add } from "./pages/add";
 import { Help } from "./pages/help";
 import { Export } from "./pages/export";
 import { Print } from "./pages/print";
+import { PrintSpecialRules } from "./pages/print-special-rules";
 import { DuplicateList } from "./pages/duplicate-list";
 import { Rename } from "./pages/rename";
 import { Datasets } from "./pages/datasets";
@@ -86,6 +87,7 @@ export const App = () => {
           <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
+          <Route path="/print-special-rules/:listId">{<PrintSpecialRules />}</Route>
           <Route path="/game-view/:listId">{<GameView />}</Route>
           <Route path="/" exact>
             {<Home isMobile />}
@@ -101,6 +103,7 @@ export const App = () => {
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
+          <Route path="/print-special-rules/:listId">{<PrintSpecialRules />}</Route>
           <Route path="/game-view/:listId">{<GameView />}</Route>
           <Route path="/">
             <Header headline="Old World Builder" hasMainNavigation />
